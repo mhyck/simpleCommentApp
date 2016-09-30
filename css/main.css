@@ -1,18 +1,54 @@
-body {
-	text-align:center;
 
+.container {
+	background-image: url(../img/brickwall.jpg);
+	/*background-color: #662200; */
 }
 
-h1 {
+#title {
 	margin-bottom:50px;
+	text-align: center;
+	color: #fff;
+	text-shadow: 3px 3px 5px #000000;
+}
+
+.form-group h5 {
+	color: #fff;
 }
 
 h3 {
 	text-align: right;
 }
 
+h5 {
+	text-shadow: 3px 3px 5px #000000;
+}
+
 input {
 	margin-bottom:20px;
+}
+
+#submitbtn {
+	text-align: right;
+}
+
+#btn {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    padding: 3px 10px;
+}
+
+#btn:hover {
+    background-color: #555555;
+    color: white;
+}
+
+#delBtn {
+	font-size: 12px;
+}
+
+#tglBtn {
+	font-size: 12px;
 }
 
 li {
@@ -20,13 +56,100 @@ li {
 	text-align:left;
 	font-size:20px;
 	word-wrap: break-word;
-	box-shadow: 1px 1px;
+	box-shadow: 10px 10px 5px #262626;
 }
 
 textarea {
     resize:none;
 }
 
-li:nth-child(even) { 
-	background: #EFF0F1; 
+#comment {
+	box-shadow: 10px 10px 5px #262626;
 }
+
+#username {
+	box-shadow: 10px 10px 5px #262626;
+	width: 50%;
+}
+
+li:nth-child(even) { 
+	background: #a6a6a6;
+	border-color: transparent; 
+}
+
+
+/*media queries*/
+@media (max-width: 414px) {
+	 .container {
+		width: 100%;
+	}
+
+	#comment {
+		width: 250px;
+		text-align: center;
+	}
+	#username {
+		text-align: center;
+		width: 150px;
+	}
+	#submitbtn {
+	 	margin-left: 100px;
+    	margin-top: 50px;
+	}
+	.col-xs-6.col-xs-offset-3 {
+		margin-left: 10px;
+	}
+	.col-xs-8.col-xs-offset-2 {
+		margin-left: 0;
+	}
+	#title {
+		width: 200px;
+    	margin-left: 30px;
+	}
+	.list-group-item {
+    	width: 282px;
+
+	}
+}
+
+@media (max-width: 320px) {
+	 .container {
+		width: 100%;
+	}
+
+	#comment {
+		width: 250px;
+		text-align: center;
+	}
+	#username {
+		text-align: center;
+		width: 150px;
+	}
+	#submitbtn {
+	 	margin-left: 100px;
+    	margin-top: 50px;
+	}
+	.col-xs-6.col-xs-offset-3 {
+		margin-left: 10px;
+	}
+
+	.col-xs-8.col-xs-offset-2 {
+		margin-left: 0;
+	}
+	#title {
+		width: 200px;
+    	margin-left: 30px;
+	}
+	.list-group-item {
+    	width: 282px;
+
+	}
+
+}
+
+
+
+
+
+
+

@@ -3,7 +3,7 @@
 <head>
 	<!-- meta tags -->
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=no; target-densityDpi=device-dpi" />
 	<!-- google fonts -->
 
 	<!-- font awesome -->
@@ -17,25 +17,29 @@
 	<!-- animate css -->
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
 	<!-- title -->
-	<title>Simple Comment App</title>
+	<title>Simple Commenting App called Freedom Wall</title>
 </head>
 <body>
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-6 col-xs-offset-3">
-				<h1>Quote Me!</h1>
+				<h1 id="title">Freedom Wall</h1>
 
-				<form id="todoForm">
+				<form id="todoForm" onsubmit="return false">
 					<div class="form-group">
-						<input id="username" class="form-control" placeholder="alias e.g. &quot;friscoBoy415&quot;">
+						<h5>quote/message</h5>
+						<textarea id="comment" rows="2" class="form-control" placeholder="e.g. &quot;sucka free dumb city!&quot;"></textarea>
 					</div>
 					<div class="form-group">
-						<textarea id="comment" rows="5" class="form-control" placeholder="write your original quotes here e.g. &quot;Sucka Free Dumb City yiieeeee!!&quot;"></textarea>
+						<h5>name/alias</h5>
+						<input onkeypress="enter()" id="username" class="form-control" placeholder="e.g. &quot;friscoBoy415&quot;">
 					</div>
-					<div class="form-group">
-						<button type="button" onclick="getComment()" class="btn btn-primary btn-lg">submit</button>
+					<div id="submitbtn" class="form-group">
+						<button id="btn" type="button" onclick="getComment()" class="btn btn-primary btn-lg">Post it!</button>
 					</div>
 				</form>
+			</div>
+			<div class="col-xs-8 col-xs-offset-2">
 				<ul id="commentList" class="list-group">
 				</ul>
 			</div>
@@ -46,7 +50,8 @@
 
 	<!-- bootstrap and javascript -->
 	<script src="js/bootstrap.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+	</script>
 	<script src="js/main.js"></script>
 </body>
 </html>
